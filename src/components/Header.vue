@@ -1,6 +1,6 @@
 <template>
   <header>
-    Sample Application
+    Willams-Sonoma Application
   </header>
 </template>
 
