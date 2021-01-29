@@ -22,7 +22,7 @@ import Modal from './Modal.vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 
 export default {
-  name: 'ProductList',
+  name: 'Products',
   data () {
     return {
       products: [],
@@ -44,9 +44,6 @@ export default {
   },
   methods: {
     fetchProducts () {
-      // axios
-      // .get('https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json')
-      // .then(response => (this.info = response));
       fetch('https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json')
         .then(stream => stream.json())
         .then(data => { if (data.groups) { this.products = data.groups } })

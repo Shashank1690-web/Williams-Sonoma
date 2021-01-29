@@ -1,8 +1,6 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+import VueSplide from '@splidejs/vue-splide'
+const vue = createApp(App)
+vue.use(VueSplide)
+vue.mount('#app')
